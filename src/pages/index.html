@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Wambua - Professional Bug Hunter, Ethical Hacker and Developer Portfolio">
+    <meta name="keywords" content="bug hunter, developer, ethical hacker, cybersecurity, portfolio">
+    <meta name="author" content="Daniel Wambua">
+    <title>Daniel Wambua | Bug Hunter & Developer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Component -->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" class="animated-button"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills" class="animated-button"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="animated-button"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#contact" class="animated-button"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <a href="https://havocsec.me" class="website-btn animated-button" target="_blank"><i class="fas fa-globe"></i> Visit Website</a>
+            <a href="https://danielwambua.dev" class="resume-link animated-button" target="_blank"><i class="fas fa-file-alt"></i> Resume/CV</a>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile box">
+        <div class="profile-container">
+            <img alt="Daniel Wambua" class="profile-picture">
+            <div class="profile-text">
+                <h1 class="typing-text" id="typing-text"></h1>
+                <p>Student | Ethical Hacker | BugBounty Hunter | Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me-section box">
+        <h3>About Me</h3>
+        <p>
+            Hi, I'm Daniel Wambua, a passionate bug hunter, developer, and ethical hacker. 
+            I specialize in web development, cybersecurity, and solving complex problems. 
+            When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, 
+            and sharing knowledge with the tech community.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills box">
+        <h3>Skills</h3>
+        <ul>
+            <!-- Development Skills -->
+            <li><i class="fab fa-html5" style="color: #e34c26;"></i> HTML</li>
+            <li><i class="fab fa-css3-alt" style="color: #1572b6;"></i> CSS</li>
+            <li><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</li>
+            <li><i class="fab fa-python" style="color: #3776ab;"></i> Python</li>
+            <li><i class="fab fa-php" style="color: #777BB4;"></i> PHP</li>
+            <li><i class="fab fa-golang" style="color: #00ADD8;"></i> Go</li>
+            <li><i class="fab fa-rust" style="color: #F74C00;"></i> Rust</li>
+            <li><i class="fab fa-java" style="color: #E32400;"></i> Java</li>
+            
+            <!-- Cybersecurity Skills -->
+            <li><i class="fas fa-bug" style="color: #ff5722;"></i> Bug Bounty Hunting</li>
+            <li><i class="fas fa-shield-alt" style="color: #4caf50;"></i> Cybersecurity</li>
+            <li><i class="fas fa-network-wired" style="color: #9c27b0;"></i> Network Penetration Testing</li>
+            <li><i class="fas fa-code" style="color: #607d8b;"></i> Ethical Hacking</li>
+            <li><i class="fas fa-lock" style="color: #FFC107;"></i> Application Security</li>
+            <li><i class="fas fa-terminal" style="color: #4CAF50;"></i> Command Line Mastery</li>
+            <li><i class="fas fa-server" style="color: #2196F3;"></i> Server Hardening</li>
+            <li><i class="fas fa-fingerprint" style="color: #E91E63;"></i> Digital Forensics</li>
+            <li><i class="fas fa-key" style="color: #FF9800;"></i> Cryptography</li>
+            <li><i class="fas fa-search" style="color: #9C27B0;"></i> OSINT</li>
+            <li><i class="fas fa-user-shield" style="color: #F44336;"></i> Firewall Configuration</li>
+            <li><i class="fab fa-linux" style="color: #FFC107;"></i> Linux Systems</li>
+            <li><i class="fab fa-windows" style="color: #0078D6;"></i> Windows Security</li>
+            <li><i class="fas fa-file-code" style="color: #00BCD4;"></i> Reverse Engineering</li>
+            <li><i class="fas fa-desktop" style="color: #795548;"></i> Kali Linux Tools</li>
+            <li><i class="fas fa-cloud" style="color: #03A9F4;"></i> Cloud Security</li>
+            <li><i class="fas fa-file-signature" style="color: #FF5722;"></i> Malware Analysis</li>
+            <li><i class="fas fa-database" style="color: #673AB7;"></i> SQL Injection</li>
+            <li><i class="fas fa-wifi" style="color: #4CAF50;"></i> Wireless Network Security</li>
+            <li><i class="fas fa-file-alt" style="color: #009688;"></i> Security Documentation</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-preview box">
+        <h3>Featured Projects</h3>
+        <div class="featured-projects-container">
+            <div class="featured-project-card">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Vulnerability Scanner Project">
+                    <div class="project-overlay">
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h4>Vulnerability Scanner</h4>
+                    <p>A comprehensive web application vulnerability scanner built with Python, featuring automated security testing, OWASP Top 10 detection, and detailed reporting capabilities.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/danielwambua/project1" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="project-demo" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-project-card">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="ZeroDay Hunter">
+                    <div class="project-overlay">
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Fuzzing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h4>ZeroDay Hunter</h4>
+                    <p>An advanced vulnerability research platform that automates the discovery of zero-day vulnerabilities using AI-powered pattern recognition, fuzzing techniques, and machine learning algorithms.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/danielwambua/zeroday-hunter" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="project-demo" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-more-projects">
+            <a href="https://github.com/danielwambua" class="github-link" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>View More Projects on GitHub</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="contact box">
+        <h3>Contact Me</h3>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: <a href="mailto:richiehavoc@proton.me">richiehavoc@proton.me</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>Phone: +254 (1) 1197-6984</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Location: Nairobi, Kenya</p>
+                </div>
+                <div class="contact-social">
+                    <a href="https://github.com/Daniel-wambua" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/danielwambua" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/danielwambua" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-left">&copy; 2025 Daniel Wambua. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://github.com/Daniel-wambua" target="_blank" aria-label="GitHub"><i class="fab fa-github" style="color: #333;"></i></a>
+                <a href="https://twitter.com/danielwambua" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" style="color: #1da1f2;"></i></a>
+                <a href="https://linkedin.com/in/danielwambua" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" style="color: #0077b5;"></i></a>
+                <a href="https://hackerrank.com/danielwambua" target="_blank" aria-label="HackerRank"><i class="fab fa-hackerrank" style="color: #2ec866;"></i></a>
+                <a href="https://medium.com/@danielwambua" target="_blank" aria-label="Medium"><i class="fab fa-medium" style="color: #00ab6c;"></i></a>
+                <a href="https://discord.gg/danielwambua" target="_blank" aria-label="Discord"><i class="fab fa-discord" style="color: #5865f2;"></i></a>
+                <a href="https://stackoverflow.com/users/danielwambua" target="_blank" aria-label="Stack Overflow"><i class="fab fa-stack-overflow" style="color: #f48024;"></i></a>
+                <a href="https://hackthebox.eu/profile/danielwambua" target="_blank" aria-label="HackTheBox"><i class="fas fa-cube" style="color: #9FEF00;"></i></a>
+                <a href="https://tryhackme.com/p/danielwambua" target="_blank" aria-label="TryHackMe"><i class="fas fa-user-secret" style="color: #c11f1f;"></i></a>
+            </div>
+            <p class="footer-right">Made with <i class="fas fa-heart" style="color: red;"></i></p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/scripts.js"></script>
+</body>
+</html>
