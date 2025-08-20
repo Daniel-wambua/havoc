@@ -4,23 +4,10 @@ Welcome to the portfolio of Daniel Wambua, a passionate bug hunter, developer, a
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
 - [Contributing](#contributing)
 - [License](#license)
-
-## Introduction
-
-I am Daniel Wambua, a dedicated bug hunter and developer with a keen interest in cybersecurity. This portfolio highlights my work, including various projects that demonstrate my skills in web development and security.
-
-## Features
-
-- Modern and responsive design
-- Smooth scrolling and interactive elements
-- Detailed project descriptions
-- Contact form for inquiries
 
 ## Technologies Used
 

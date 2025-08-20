@@ -428,7 +428,7 @@ header .branding p {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     animation: profilePicAnimation 2s ease-in-out;
-    content: url('https://pics.craiyon.com/2024-09-20/4Qxf-beJSGWppuFas-SolQ.webp');
+    content: url('https://github.com/Daniel-wambua/havoc/blob/main/src/images/profilepic.jpg?raw=true');
 }
 
 @keyframes profilePicAnimation {
