@@ -1,0 +1,29 @@
+{
+  "name": "Havoc Portfolio - Daniel Wambua",
+  "short_name": "Havoc",
+  "description": "Professional portfolio of Daniel Wambua - Bug Hunter, Ethical Hacker & Developer",
+  "icons": [
+    {
+      "src": "/src/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#0a0e27",
+  "background_color": "#0a0e27",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/"
+}

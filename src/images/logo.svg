@@ -1,0 +1,44 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1e3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bgGradient)"/>
+  
+  <!-- Corner brackets for tech aesthetic -->
+  <g stroke="#00ff41" stroke-width="8" fill="none" stroke-linecap="round">
+    <!-- Top-left bracket -->
+    <path d="M 77 128 L 77 77 L 128 77"/>
+    <!-- Bottom-right bracket -->
+    <path d="M 384 435 L 435 435 L 435 384"/>
+  </g>
+  
+  <!-- Accent lines -->
+  <g stroke="#00ff4144" stroke-width="6" stroke-linecap="round">
+    <!-- Top accent -->
+    <line x1="154" y1="154" x2="256" y2="154"/>
+    <!-- Bottom accent -->
+    <line x1="256" y1="358" x2="358" y2="358"/>
+  </g>
+  
+  <!-- Main "H" with glow -->
+  <g stroke="#00ff41" stroke-width="32" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Left vertical bar -->
+    <line x1="154" y1="128" x2="154" y2="384"/>
+    <!-- Right vertical bar -->
+    <line x1="358" y1="128" x2="358" y2="384"/>
+    <!-- Horizontal connecting bar -->
+    <line x1="154" y1="256" x2="358" y2="256"/>
+  </g>
+</svg>

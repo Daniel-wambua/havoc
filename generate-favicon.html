@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Havoc Favicon</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0e27;
+            color: #00ff41;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .preview {
+            margin: 20px;
+            padding: 20px;
+            background: #1a1e3a;
+            border-radius: 8px;
+            border: 2px solid #00ff41;
+        }
+        canvas {
+            border: 2px solid #00ff41;
+            margin: 10px;
+            image-rendering: pixelated;
+        }
+        button {
+            background: #00ff41;
+            color: #0a0e27;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        button:hover {
+            background: #00cc33;
+        }
+        h2 {
+            color: #00ff41;
+            text-shadow: 0 0 10px #00ff41;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔥 HAVOC FAVICON GENERATOR 🔥</h1>
+    
+    <div class="preview">
+        <h2>16x16 (Browser Tab)</h2>
+        <canvas id="favicon16" width="16" height="16"></canvas>
+        <button onclick="downloadCanvas('favicon16', 'favicon-16x16.png')">Download 16x16</button>
+    </div>
+
+    <div class="preview">
+        <h2>32x32 (Standard)</h2>
+        <canvas id="favicon32" width="32" height="32"></canvas>
+        <button onclick="downloadCanvas('favicon32', 'favicon-32x32.png')">Download 32x32</button>
+    </div>
+
+    <div class="preview">
+        <h2>64x64 (High Resolution)</h2>
+        <canvas id="favicon64" width="64" height="64"></canvas>
+        <button onclick="downloadCanvas('favicon64', 'favicon-64x64.png')">Download 64x64</button>
+    </div>
+
+    <div class="preview">
+        <h2>192x192 (Mobile)</h2>
+        <canvas id="favicon192" width="192" height="192"></canvas>
+        <button onclick="downloadCanvas('favicon192', 'android-chrome-192x192.png')">Download 192x192</button>
+    </div>
+
+    <div class="preview">
+        <h2>512x512 (PWA)</h2>
+        <canvas id="favicon512" width="512" height="512"></canvas>
+        <button onclick="downloadCanvas('favicon512', 'android-chrome-512x512.png')">Download 512x512</button>
+    </div>
+
+    <button onclick="downloadAll()" style="font-size: 20px; padding: 15px 30px; margin-top: 20px;">
+        ⬇️ DOWNLOAD ALL FAVICONS
+    </button>
+
+    <script>
+        // Draw Havoc logo - Stylized "H" with hacker aesthetic
+        function drawHavocLogo(ctx, size) {
+            const scale = size / 32;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background - dark with slight gradient
+            const gradient = ctx.createRadialGradient(size/2, size/2, 0, size/2, size/2, size);
+            gradient.addColorStop(0, '#1a1e3a');
+            gradient.addColorStop(1, '#0a0e27');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // Main color - neon green
+            ctx.strokeStyle = '#00ff41';
+            ctx.fillStyle = '#00ff41';
+            ctx.lineWidth = Math.max(2, size / 16);
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            // Draw stylized "H" with cyber aesthetic
+            const padding = size * 0.15;
+            const width = size - (padding * 2);
+            const height = size - (padding * 2);
+            
+            // Left vertical bar
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.2, padding);
+            ctx.lineTo(padding + width * 0.2, padding + height);
+            ctx.stroke();
+            
+            // Right vertical bar
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.8, padding);
+            ctx.lineTo(padding + width * 0.8, padding + height);
+            ctx.stroke();
+            
+            // Horizontal connecting bar (with angle for cyber look)
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.2, padding + height * 0.5);
+            ctx.lineTo(padding + width * 0.8, padding + height * 0.5);
+            ctx.stroke();
+            
+            // Add cyber accent lines
+            ctx.strokeStyle = '#00ff4144';
+            ctx.lineWidth = Math.max(1, size / 32);
+            
+            // Top accent
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.2, padding + height * 0.15);
+            ctx.lineTo(padding + width * 0.5, padding + height * 0.15);
+            ctx.stroke();
+            
+            // Bottom accent
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.5, padding + height * 0.85);
+            ctx.lineTo(padding + width * 0.8, padding + height * 0.85);
+            ctx.stroke();
+            
+            // Add small corner brackets for tech feel
+            ctx.strokeStyle = '#00ff41';
+            ctx.lineWidth = Math.max(1, size / 24);
+            
+            // Top-left bracket
+            ctx.beginPath();
+            ctx.moveTo(padding, padding + height * 0.1);
+            ctx.lineTo(padding, padding);
+            ctx.lineTo(padding + width * 0.1, padding);
+            ctx.stroke();
+            
+            // Bottom-right bracket
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.9, padding + height);
+            ctx.lineTo(padding + width, padding + height);
+            ctx.lineTo(padding + width, padding + height * 0.9);
+            ctx.stroke();
+            
+            // Add glow effect
+            ctx.shadowBlur = size / 8;
+            ctx.shadowColor = '#00ff41';
+            
+            // Redraw main H with glow
+            ctx.strokeStyle = '#00ff41';
+            ctx.lineWidth = Math.max(2, size / 16);
+            
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.2, padding);
+            ctx.lineTo(padding + width * 0.2, padding + height);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.8, padding);
+            ctx.lineTo(padding + width * 0.8, padding + height);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(padding + width * 0.2, padding + height * 0.5);
+            ctx.lineTo(padding + width * 0.8, padding + height * 0.5);
+            ctx.stroke();
+        }
+
+        // Generate all sizes
+        ['16', '32', '64', '192', '512'].forEach(size => {
+            const canvas = document.getElementById('favicon' + size);
+            const ctx = canvas.getContext('2d');
+            drawHavocLogo(ctx, parseInt(size));
+        });
+
+        // Download function
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const url = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = url;
+            link.click();
+        }
+
+        // Download all
+        function downloadAll() {
+            setTimeout(() => downloadCanvas('favicon16', 'favicon-16x16.png'), 100);
+            setTimeout(() => downloadCanvas('favicon32', 'favicon-32x32.png'), 300);
+            setTimeout(() => downloadCanvas('favicon64', 'favicon-64x64.png'), 500);
+            setTimeout(() => downloadCanvas('favicon192', 'android-chrome-192x192.png'), 700);
+            setTimeout(() => downloadCanvas('favicon512', 'android-chrome-512x512.png'), 900);
+            alert('Downloading all favicons! Check your downloads folder.');
+        }
+    </script>
+</body>
+</html>
