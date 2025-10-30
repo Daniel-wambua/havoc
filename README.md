@@ -29,7 +29,7 @@ Why settle for a basic portfolio? Havoc Portfolio is a high-performance, modern 
 <details>
 <summary>About the Developer</summary>
 
-> I'm Daniel Wambua, a cybersecurity enthusiast, bug bounty hunter, and full-stack developer passionate about building secure and elegant web experiences. You can find my work at [havocsec.me](https://havocsec.me) and [danielwambua.dev](https://danielwambua.dev).
+> I'm Daniel Wambua, a cybersecurity enthusiast, bug bounty hunter, and full-stack developer passionate about building secure and elegant web experiences. You can find my work at [lab.havocsec.me](https://lab.havocsec.me) and [danielwambua.dev](https://danielwambua.dev).
 
 </details>
 
