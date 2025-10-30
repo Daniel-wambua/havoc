@@ -1,0 +1,50 @@
+name: Vercel Production Deployment
+
+# NOTE: This workflow is OPTIONAL. Vercel automatically deploys when you connect your repository.
+# To use this workflow, you need to add these secrets in GitHub:
+# - VERCEL_TOKEN: Get from https://vercel.com/account/tokens
+# - VERCEL_ORG_ID: Get from https://vercel.com/[team]/settings
+# - VERCEL_PROJECT_ID: Get from project settings in Vercel dashboard
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Deploy-Production:
+    runs-on: ubuntu-latest
+    # Only run if secrets are configured
+    if: ${{ secrets.VERCEL_TOKEN != '' }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

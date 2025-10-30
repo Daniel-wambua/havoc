@@ -2,11 +2,12 @@
   "name": "daniel-wambua-portfolio",
   "version": "1.0.0",
   "description": "Portfolio website for Daniel Wambua, showcasing skills as a bug hunter, developer, and aspiring hacker.",
-  "main": "src/index.js",
+  "main": "index.html",
   "scripts": {
-    "start": "live-server src",
-    "build": "webpack --mode production",
-    "test": "jest"
+    "dev": "live-server --port=3000 --watch=.",
+    "build": "node scripts/build.js",
+    "test": "jest",
+    "vercel-build": "npm run build"
   },
   "keywords": [
     "portfolio",
@@ -17,12 +18,16 @@
   "author": "Daniel Wambua",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.6.0",
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
+    "clean-css": "^5.3.3",
+    "fs-extra": "^11.3.2",
+    "html-minifier": "^4.0.0",
+    "jest": "^27.4.5",
     "live-server": "^1.2.1",
-    "webpack": "^5.64.4",
-    "jest": "^27.4.5"
+    "terser": "^5.44.0",
+    "webpack": "^5.64.4"
   }
 }
