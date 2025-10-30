@@ -4,7 +4,7 @@
 <a href="https://github.com/Daniel-wambua/havoc"><img src="https://www.havocracingco.com/cdn/shop/files/gold_cf4385de-4a47-424f-8c5a-b1bbd9913276_1800x1800.png?v=1710121850" width="600" /></a><br />
 <i>Professional portfolio with cyberpunk aesthetics & blazing performance</i>
 <br /><br />
-<b>🌐 <a href="https://havoc-portfolio.vercel.app">havoc-portfolio.vercel.app</a></b> | <b>📦 <a href="https://github.com/Daniel-wambua/havoc">github.com/Daniel-wambua/havoc</a></b>
+<b>🌐 <a href="https://portfolio.havocsec.me">portfolio.havocsec.me</a></b> | <b>📦 <a href="https://github.com/Daniel-wambua/havoc">github.com/Daniel-wambua/havoc</a></b>
 </p>
 
 ## Motive
